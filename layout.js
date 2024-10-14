@@ -1,12 +1,9 @@
-
-import "./globals.css";
-
 import { Abhaya_Libre, Abril_Fatface } from "next/font/google";
-import "./globals.css";
+import './styles/global.css'
 
 const abhayaLibre = Abhaya_Libre({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400","500","600", "700","800"],
   variable: "--font-abhaya-libre",
 });
 
