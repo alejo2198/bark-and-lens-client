@@ -7,8 +7,8 @@ const Services = () => {
       type:"basic",
       perks:[
         "30 minutes",
-        "1 portrait shot of your lovely pup",
-        "1 portrait shot of you/family with your pup"
+        "1 puppy photo",
+        "1 family photo"
       ]
     },
     {
@@ -16,8 +16,8 @@ const Services = () => {
       type:"recommended",
       perks:[
         "1 hour",
-        "2 portrait shot of your lovely pup",
-        "2 portrait shot of you/family with your pup"
+        "2 puppy photos",
+        "2 family photos"
       ]
     },
     {
@@ -25,8 +25,8 @@ const Services = () => {
       type:"premium",
       perks:[
         "2 hours",
-        "3 portrait shot of your lovely pup",
-        "3 portrait shot of you/family with your pup"
+        "3 puppy photos",
+        "3 family photos"
       ]
     }
   ]

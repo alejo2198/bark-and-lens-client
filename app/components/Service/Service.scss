@@ -37,7 +37,7 @@
         clip-path: polygon(0 0, 100% 26%, 100% 100%, 0% 100%);
         background-image: linear-gradient(180deg, #674636 20.52%, #2D1509 100%);
         color:$secondary-color;
-        padding: 3rem 1.5rem 2rem;
+        padding: 3rem 1.5rem 3rem;
         border-radius: 0 0 1.25rem 1.25rem;
         
     }
@@ -48,7 +48,8 @@
     }
     &__perk{
         display: flex;
-        gap:.5rem
+        gap:.5rem;
+        align-items: center;
     }
     &__type{
         background-color: $secondary-color;
