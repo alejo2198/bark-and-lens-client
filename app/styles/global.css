@@ -1,0 +1,16 @@
+*,*::before,*::after{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-abhaya-libre);
+  background-color: #AAB396;;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-abril-fatface);
+}
+ul{
+  list-style-type:none;
+}
