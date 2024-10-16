@@ -1,0 +1,86 @@
+@use '../../styles/variables' as *;
+
+.testimonials{
+    background-image:  linear-gradient(90deg, #674636 0%, #372117 100%);
+    padding: 2.5rem 1.5rem;
+    
+    &__header{
+        color:$secondary-color;
+        margin-bottom:3rem;
+    }
+}
+.testimonial{
+    color:$primary-color;
+    display: flex;
+    background-color: $secondary-color;
+    position: relative;
+    padding:1rem 1.5rem;
+    border-radius: 20px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:3rem;
+    }
+    &__rating{
+        display: flex;
+        gap:.25rem;
+        margin-bottom:1rem;
+    }
+    &__quote{
+        display: inline;
+        &--reverse{
+            margin-left: auto;
+            rotate:180deg;
+        }
+    }
+    &__text-container{
+        display: flex;
+        flex-direction: column;
+        gap:.25rem;
+    }
+    &__text{
+        margin-top: .25rem;
+    }
+}
+.chevron{
+    
+    &--right{
+        rotate: 180deg;
+    }
+    &__container{
+        height: 2.5rem;
+        width:4.75rem;
+        border-radius: 100%;
+        background-color: $background-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.author{
+    font-size: 26px;
+    font-weight: 700;
+    &-container{
+        width: 33%;
+        padding-right: 1rem;
+        border-right: solid 1px $primary-color;
+    }
+}
+.dog{
+    &__name{
+        font-size: 26px;
+        font-weight: 700;
+    }
+    &-container{
+        width: 33%;
+        padding-left: 1rem;
+    }
+    &__image{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius: 1rem;
+    }
+}
