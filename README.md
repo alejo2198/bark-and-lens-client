@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bark & Lens - Dog Photography Appointment App
 
-## Getting Started
+Welcome to **Bark & Lens**, a dog photography booking application. This app allows dog owners to easily book photography sessions, manage appointments, and browse various photo packages tailored for their furry companions.
 
-First, run the development server:
+## 🌟 Current Status
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🚀 Landing Page
+The **Landing Page** is fully designed and functional! It introduces the photography business with a visually engaging layout, showcases available services, and has a strong call-to-action for booking appointments.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Features:**
+  - Hero section with vibrant visuals.
+  - Introduction to services with descriptions.
+  - CTA for scheduling photography sessions.
+  - Responsive design for a clean desktop experience (1280px layout).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🛠️ In Progress
+We're actively working on the following features:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 👤 User Pages
+- **User Dashboard**: After authentication, users will be able to:
+  - View their upcoming and recent appointments.
+  - Manage their bookings (cancel, reschedule).
+  - Update their profiles and add dog profiles.
+  - Review available photo packages.
 
-## Learn More
+#### 🔑 Admin Pages
+- **Admin Dashboard**: Administrators will be able to:
+  - Manage appointment schedules.
+  - Update services and packages.
+  - View and manage client information.
+  - Oversee user bookings and system settings.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This app is built using modern web technologies to ensure efficiency and scalability:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js (v14.0.0)
+- **State Management**: TanStack Query (v5.1.0)
+- **Styling**: Toastify (v9.1.2) for user notifications
+- **Email Services**: EmailJS (v3.11.0)
+- **Authentication & Storage**: Firebase (v11.13.0)
+- **Backend**: MERN stack (MongoDB, Express, React, Node.js)
 
-## Deploy on Vercel
+## 🚧 What's Next?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Finalizing **User and Admin** functionality.
+- Responsive design improvements for mobile viewports.
+- Implementing accessibility enhancements for a seamless user experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Stay tuned for more updates as we roll out these exciting features!
+
+## 📂 Repository
+
+The full project code is available on [GitHub](https://github.com/alejo2198/bark-and-lens-client.git).
