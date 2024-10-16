@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+.cta {
+  background-image: url("../../../public/images/cta-puppy.png");
+  background-size: cover;
+  background-position: left;
+  min-height: 80vh;
+  position: relative;
+  &__content {
+    position: relative;
+    z-index: 2;
+    color:$secondary-color;
+    padding:10% 5%;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+  }
+  &__header{
+    margin-bottom: .5rem;
+    font-size: 2rem;
+  }
+  &__text{
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+  }
+  
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(170, 179, 150, 0.3) 0%,
+    rgba(134, 141, 116, 0.6) 100%
+  ); /* Change the RGBA values to adjust the opacity and color of the overlay */
+  z-index: 1;
+}
