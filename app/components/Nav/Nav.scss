@@ -15,10 +15,12 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    color: #f7eed3
   }
   &__link {
     color: #f7eed3;
     font-size: 1rem;
+    text-decoration: none;
     &:hover{
         text-decoration: underline;
         cursor: pointer;

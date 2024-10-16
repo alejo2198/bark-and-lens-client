@@ -11,10 +11,9 @@ The **Landing Page** is fully designed and functional! It introduces the photogr
   - Hero section with vibrant visuals.
   - Introduction to services with descriptions.
   - CTA for scheduling photography sessions.
-  - Responsive design for a clean desktop experience (1280px layout).
 
 ### 🛠️ In Progress
-We're actively working on the following features:
+I'm actively working on the following features:
 
 #### 👤 User Pages
 - **User Dashboard**: After authentication, users will be able to:
@@ -28,15 +27,15 @@ We're actively working on the following features:
   - Manage appointment schedules.
   - Update services and packages.
   - View and manage client information.
-  - Oversee user bookings and system settings.
+  - Oversee user bookings 
 
 ## 🛠️ Tech Stack
 
-This app is built using modern web technologies to ensure efficiency and scalability:
+This app is built using modern web technologies:
 
 - **Frontend**: Next.js (v14.0.0)
 - **State Management**: TanStack Query (v5.1.0)
-- **Styling**: Toastify (v9.1.2) for user notifications
+- **Styling**: Sass (v1.79.5)
 - **Email Services**: EmailJS (v3.11.0)
 - **Authentication & Storage**: Firebase (v11.13.0)
 - **Backend**: MERN stack (MongoDB, Express, React, Node.js)
