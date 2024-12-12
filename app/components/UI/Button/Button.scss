@@ -1,3 +1,5 @@
+@use "../../../styles/variables" as *;
+
 .button {
   height: 2.5rem;
   padding: 0.5rem 2rem;
@@ -13,12 +15,28 @@
     @extend .button;
     background-color: #f7eed3;
     color: #674636;
+    &--reverse{
+      @extend .button;
+      color: #f7eed3;
+      background-color: #674636;
+      border: 0.05rem solid #f7eed3;
+    }
   }
   &__login {
     @extend .button;
     color: #f7eed3;
     background-color: #674636;
     border: 0.05rem solid #f7eed3;
+  }
+  &__google-signup{
+    @extend .button;
+    display: flex;
+    align-items: center;
+    gap:6rem;
+    color: $primary-color;
+    background-color: $accent-color;
+    border: .05rem $primary-color solid
+    
   }
 }
 .buttons{

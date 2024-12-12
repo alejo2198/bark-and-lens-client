@@ -58,7 +58,7 @@ const Footer = () => {
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.7817258875725!2d-79.47380942382433!3d43.63190177110315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b36759b97ac23%3A0x369affe02bf904e5!2sHumber%20Bay%20Arch%20Bridge!5e0!3m2!1sen!2sca!4v1729053211042!5m2!1sen!2sca"
         width="250"
         height="150"
-        allowfullscreen=""
+        allowFullScreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         className="map"
