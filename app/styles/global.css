@@ -11,6 +11,11 @@ body {
 h1, h2, h3 {
   font-family: var(--font-abril-fatface);
 }
+h1{
+  color: #674636;  
+  font-size: 2rem;
+
+}
 ul{
   list-style-type:none;
 }

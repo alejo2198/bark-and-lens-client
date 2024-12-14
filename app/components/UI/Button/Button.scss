@@ -27,6 +27,18 @@
     color: #f7eed3;
     background-color: #674636;
     border: 0.05rem solid #f7eed3;
+    &--reverse{
+      @extend .button;
+      color: #f7eed3;
+      background-color: #674636;
+      border: 0.05rem solid #f7eed3;
+    }
+  }
+  &__logout {
+    @extend .button;
+    background-color: #f7eed3;
+    color: #674636;
+    
   }
   &__google-signup{
     @extend .button;
@@ -37,6 +49,16 @@
     background-color: $accent-color;
     border: .05rem $primary-color solid
     
+  }
+  &__cta-book{
+    @extend .button;
+      color: #f7eed3;
+      background-color: #674636;
+      border: 0.05rem solid #f7eed3;
+      width: 10rem;
+  }
+  &__book{
+    @extend .button__cta-book;
   }
 }
 .buttons{

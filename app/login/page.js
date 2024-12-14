@@ -31,7 +31,7 @@ const Login = () => {
                 />
               </div>
               <p className={styles.paragraph}>Don't have an account? <Link href="/signup">Sign Up</Link></p>
-              <Button variant={"signup--reverse"} text={"Log In"} />
+              <Button variant="login--reverse" text="Log In" />
 
               <div className={styles.orDivider}>
                 <hr className={styles.line} />

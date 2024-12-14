@@ -1,0 +1,31 @@
+@use '../../../styles/variables' as *;
+
+.upcoming{
+   
+    &__header{
+        margin-bottom: 1.5rem;
+        &--secondary{
+            color: $primary-color;
+        }
+    }
+}
+.container{
+    background-color: $secondary-color;
+    max-width: 50rem;
+    margin: 0 auto;
+    border-radius: 0.625rem;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    display: flex ;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    
+}
+.paragraph{
+    width:80%;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
