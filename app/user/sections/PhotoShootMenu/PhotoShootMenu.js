@@ -34,13 +34,11 @@ const PhotoShootMenu = () => {
   const [photoshoot, setPhotoshoot] = useState(photoshoots[0]);
 
   const handlePackageChange = (name) => {
-    console.log(name);
     if (name === "basic") {
       setPhotoshoot(photoshoots[0]);
     } else if (name === "recommended") {
       setPhotoshoot(photoshoots[1]);
     } else if (name === "premium") {
-      console.log("w");
       setPhotoshoot(photoshoots[2]);
     }
   };
@@ -85,15 +83,14 @@ const PhotoShootMenu = () => {
               </p>
             </div>
           </div>
-          <Button variant="book" text="Book Now" />
+          
+          <Button variant="select" text="Select" />
         </div>
       <aside className={styles.aside}>
-        <ul>
-          <li onClick={() => handlePackageChange("basic")}>Basic</li>
-          <li onClick={() => handlePackageChange("recommended")}>
-            Recommended
-          </li>
-          <li onClick={() => handlePackageChange("premium")}>Premium</li>
+        <ul className={styles["photoshoot__menu"]}>
+          <li className={styles[`photoshoot__option${photoshoot.name === 'basic' ? "--selected": ''}`]} onClick={() => handlePackageChange("basic")}>Basic</li>
+          <li className={styles[`photoshoot__option${photoshoot.name === 'recommended' ? "--selected": ''}`]} onClick={() => handlePackageChange("recommended")}>Recommended</li>
+          <li className={styles[`photoshoot__option${photoshoot.name === 'premium' ? "--selected": ''}`]} onClick={() => handlePackageChange("premium")}>Premium</li>
         </ul>
       </aside>
       </div>

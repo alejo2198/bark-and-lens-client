@@ -57,7 +57,7 @@
       border: 0.05rem solid #f7eed3;
       width: 10rem;
   }
-  &__book{
+  &__select, &__select-time{
     @extend .button__cta-book;
   }
 }

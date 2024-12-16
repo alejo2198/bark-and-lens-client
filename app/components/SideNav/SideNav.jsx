@@ -10,13 +10,13 @@ const SideNav = () => {
             <Image src={logo} alt="logo" height={110} width={160} />
             <ul className={styles['nav__links']}>
                 <li className={styles['nav__link-container']}>
-                    <Link className={styles['nav__link']} href="/user/dashboard">Dashboard</Link>
+                    <Link className={styles['nav__link']} href="/user">Dashboard</Link>
                 </li>
                 <li className={styles['nav__link-container']}>
-                    <Link className={styles['nav__link']} href="/user/book" >Appointments</Link>
+                    <Link className={styles['nav__link']} href="/user/appointment/book" >Appointments</Link>
                 </li>
                 <li className={styles['nav__link-container']}>
-                    <Link className={styles['nav__link']} href="/user/profile">Profile</Link>
+                    <Link className={styles['nav__link']} href="/user">Profile</Link>
                 </li>
                 <Button variant='logout' text="Log Out"/>
             </ul>

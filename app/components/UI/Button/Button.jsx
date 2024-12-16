@@ -20,11 +20,17 @@ const Button = ({ variant, text, icon }) => {
       case "google-signup":
       case "google-login":
       case "login--reverse":
-        router.push("/user/dashboard"); // Navigate to the dashboard for these cases
+        router.push("/user"); // Navigate to the dashboard for these cases
         break;
       case "cta-book":
       case "book":
-        router.push("/user/book"); // Navigate to the main page
+        router.push("/user/appointment/book"); // Navigate to the appointment booking
+        break;
+      case "select":
+        router.push("/user/appointment/book"); // Navigate to the appointment booking
+        break;
+      case "select-time":
+        router.push("/user/"); // Navigate to the appointment booking
         break;
       case "logout":
         router.push("/"); // Navigate to the main page

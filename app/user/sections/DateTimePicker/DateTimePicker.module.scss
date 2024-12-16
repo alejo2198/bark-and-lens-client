@@ -1,0 +1,80 @@
+@use "../../../styles/variables" as *;
+
+.header {
+  color: $primary-color;
+  font-family: "Abril Fatface";
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  &__control {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    color: $primary-color;
+  }
+  &__input {
+    background-color: $accent-color;
+    outline: none;
+    border: none;
+    padding: .5rem 1.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: $primary-color;
+  }
+}
+.chevron {
+  color: $primary-color;
+}
+.datetime {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    border-radius: 0.625rem;
+    padding: 2rem 2.5rem;
+    max-width: 50rem;
+    margin: 1.5rem auto;
+  }
+  &__header {
+    margin-bottom: .5rem;
+    color: $primary-color;
+  }
+  &__morning {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  &__afternoon {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  &__time {
+    background: $accent-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: $primary-color;
+    font-family: "Abhaya Libre";
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    border-radius: .0625rem;
+    cursor: pointer;
+    &:hover{
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+    &--selected{
+      @extend .datetime__time;
+      background-image:linear-gradient($primary-color,#372117);
+      color: $secondary-color;
+    }
+  }
+}
