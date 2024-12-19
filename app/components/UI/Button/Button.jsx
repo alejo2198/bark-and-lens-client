@@ -38,6 +38,9 @@ const Button = ({ variant, text, icon }) => {
       case "logout":
         router.push("/"); // Navigate to the main page
         break;
+      case "cancel":
+        router.push("/"); // Navigate to the main page
+        break;
       default:
         console.log("No navigation specified.");
     }

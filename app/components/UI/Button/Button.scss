@@ -64,6 +64,14 @@
     @extend .button__cta-book;
     width: 12rem;
   }
+  &__cancel{
+    @extend .button__cta-book;
+    background-color: #C94B46;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .buttons{
   display: flex;

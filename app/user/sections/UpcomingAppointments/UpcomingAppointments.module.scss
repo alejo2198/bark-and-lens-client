@@ -1,7 +1,6 @@
 @use '../../../styles/variables' as *;
 
 .upcoming{
-   
     &__header{
         margin-bottom: 1.5rem;
         &--secondary{
@@ -17,6 +16,13 @@
     padding: 0 3rem;
     display: flex;
     justify-content: space-between;
+    &--apt{
+        background-color: $secondary-color;
+        max-width: 50rem;
+        margin: 0 auto;
+        border-radius: 0.625rem;
+        padding: 1.5rem 3rem;
+    }
 }
 .content{
     display: flex ;
@@ -28,4 +34,39 @@
     width:80%;
     margin-top: 1rem;
     margin-bottom: 3rem;
+}
+
+// APPOINTMENT
+
+.appointment{
+    &--container{
+        color:$primary-color;
+        width: 100%;
+    }
+    &__info{
+        margin-top: 1.5rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    &__fields{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: .75rem;
+        
+    }
+    &__field{
+        width: 15rem;
+    }
+    &__span{
+        color:$primary-color;
+        font-weight: bold;
+    }
+    &__data{
+        color:$primary-color;
+    }
+    &__buttons{
+        display: flex;
+        align-items: end;
+    }
 }
