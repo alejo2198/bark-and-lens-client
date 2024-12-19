@@ -60,6 +60,10 @@
   &__select, &__select-time{
     @extend .button__cta-book;
   }
+  &__home{
+    @extend .button__cta-book;
+    width: 12rem;
+  }
 }
 .buttons{
   display: flex;

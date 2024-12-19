@@ -30,7 +30,10 @@ const Button = ({ variant, text, icon }) => {
         router.push("/user/appointment/book"); // Navigate to the appointment booking
         break;
       case "select-time":
-        router.push("/user/"); // Navigate to the appointment booking
+        router.push("/user"); // Navigate to the appointment booking
+        break;
+      case "home":
+        router.push("/user"); // Navigate to the main page
         break;
       case "logout":
         router.push("/"); // Navigate to the main page
