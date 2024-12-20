@@ -57,13 +57,20 @@
       border: 0.05rem solid #f7eed3;
       width: 10rem;
   }
-  &__select, &__select-time{
+  &__select, &__select-time,&__view{
     @extend .button__cta-book;
   }
-  &__home{
+  &__home {
     @extend .button__cta-book;
-    width: 12rem;
+    width:12rem;
   }
+
+  &__view{
+    @extend .button__cta-book;
+    font-size: .875rem;
+    width: 9rem;
+  }
+
   &__cancel{
     @extend .button__cta-book;
     background-color: #C94B46;

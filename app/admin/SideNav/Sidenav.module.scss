@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+
+.nav{
+    background-color: $primary-color;
+    width: 13rem;
+    min-height: 100vh;
+    height:100%;
+    position: fixed;
+    left:0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 4.5rem;
+    gap:1.5rem;
+    &__links {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 1rem;
+        color: #f7eed3
+      }
+      &__link {
+        color: #f7eed3;
+        font-size: 1rem;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+}
+}
+.admin-title{
+  color: #F7EED3;
+  font-family: "Abhaya Libre";
+  font-size: 1.375rem;
+  font-weight: 700;
+  border-bottom: #F7EED3 solid .15rem;
+  text-align: center;
+
+}

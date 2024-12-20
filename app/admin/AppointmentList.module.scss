@@ -1,0 +1,40 @@
+@use "../styles/variables" as *;
+.header {
+  color: $primary-color;
+  font-family: "Abril Fatface";
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  border-radius: 0.625rem;
+  background-color: $secondary-color;
+  padding: 1.5rem;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; // Ensures styles apply to rows
+
+  &__header {
+    color: $primary-color;
+    font-weight: bold;
+    border-bottom: 0.15rem solid $primary-color;
+  }
+
+  &__row {
+    background-color: $secondary-color;
+    color: $primary-color;
+    &:nth-child(even) {
+      background-color: $accent-color;
+    }
+    &:nth-last-child(0){
+        border-radius: 0 0 .625rem .625rem;
+    }
+
+  }
+
+  th,
+  td {
+    padding: .75rem;
+    text-align: left;
+  }
+}
