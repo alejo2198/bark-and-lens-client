@@ -31,6 +31,7 @@
 }
 .chevron {
   color: $primary-color;
+  cursor: pointer;
 }
 .datetime {
   &__container {
@@ -77,4 +78,20 @@
       color: $secondary-color;
     }
   }
+}
+.button{
+  height: 2.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  font-size: medium;
+  color: #f7eed3;
+      background-color: #674636;
+      border: 0.05rem solid #f7eed3;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;}
+
+  
 }

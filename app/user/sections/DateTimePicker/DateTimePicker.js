@@ -1,26 +1,28 @@
 "use client";
 import Image from "next/image";
-import Button from "@/app/components/UI/Button/Button";
 import { useState } from "react";
 import styles from "./DateTimePicker.module.scss";
 
-const DateTimePicker = () => {
-  let initialState = {
-    date: new Date(),
-    time: "9:00 AM",
-  };
+
+const DateTimePicker = ({handleDateTime,handlePackage}) => {
+  
   let today = new Date();
   let dateValue = today.toISOString().substring(0,10);
 
-  const [datetime, setDateTime] = useState(null);
+  const [time, setTime] = useState("5:00 PM");
 
-  const handleTimeClick = (time) => {
-    let newTime = time;
+  const handleTimeClick = (timeValue) => {
+    setTime(timeValue)
   };
 
-  const handleDateChange = (date) => {
-    let newDate = date;
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleDateTime(new Date(e.target.date.value),time)
+  }
+  const handleReturn = (e) => {
+    handlePackage("")
+  }
+  
 
   return (
     <section className={styles.datetime}>
@@ -31,21 +33,22 @@ const DateTimePicker = () => {
           width={25}
           alt="navigational arrow"
           className={styles["chevron"]}
+          onClick={handleReturn}
         />
       <h2>Select a Date & Time</h2>
       </div>
       <div className={styles["datetime__container"]}>
-        <form action="" method="post" className={styles.form}>
+        <form onSubmit={handleSubmit} action="" method="post" className={styles.form}>
           <div className={styles["form__control"]}>
             <label htmlFor="date">Date:</label>
             <input type="date" name="date" id="date" defaultValue={dateValue} className={styles["form__input"]}/>
         </div>
-            <Button variant="select-time" text="Select" />
+        <button type="submit" className={styles.button}>Select</button>  
         </form>
             <h4 className={styles["datetime__header"]}>AM</h4>
           <ul className={styles["datetime__morning"]}>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "9:00 AM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("9:00 AM");
               }}
@@ -53,7 +56,7 @@ const DateTimePicker = () => {
               9:00 AM
             </li>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "9:30 AM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("9:30 AM");
               }}
@@ -64,7 +67,7 @@ const DateTimePicker = () => {
             <h4 className={styles["datetime__header"]}>PM</h4>
           <ul className={styles["datetime__afternoon"]}>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "5:00 PM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("5:00 PM");
               }}
@@ -72,7 +75,7 @@ const DateTimePicker = () => {
               5:00 PM
             </li>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "5:30 PM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("5:30 PM");
               }}
@@ -80,7 +83,7 @@ const DateTimePicker = () => {
               5:30 PM
             </li>
             <li
-              className={styles["datetime__time--selected"]}
+              className={styles[`datetime__time${time === "6:00 PM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("6:00 PM");
               }}
@@ -88,7 +91,7 @@ const DateTimePicker = () => {
               6:00 PM
             </li>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "6:30 PM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("6:30 PM");
               }}
@@ -96,7 +99,7 @@ const DateTimePicker = () => {
               6:30 PM
             </li>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "7:00 PM" ? "--selected" : ''}`]}
               onClick={() => {
                 handleTimeClick("7:00 PM");
               }}
@@ -104,7 +107,7 @@ const DateTimePicker = () => {
               7:00 PM
             </li>
             <li
-              className={styles["datetime__time"]}
+              className={styles[`datetime__time${time === "7:30 PM" ? "--selected" : ''}`]}
                 onClick={() => {
                     handleTimeClick("7:30 PM");
               }}

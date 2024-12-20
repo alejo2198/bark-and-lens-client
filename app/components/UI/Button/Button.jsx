@@ -3,12 +3,12 @@ import "./Button.scss";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 
-const Button = ({ variant, text, icon }) => {
+const Button = ({ variant, text, icon,photoPackage}) => {
+  
   const router = useRouter(); // Initialize the router
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(variant)
     switch (variant) {
       case "login":
         router.push("/login"); // Navigate to the login page
@@ -28,6 +28,13 @@ const Button = ({ variant, text, icon }) => {
         break;
       case "select":
         router.push("/user/appointment/book"); // Navigate to the appointment booking
+        break;
+        case "select-param":
+          console.log(photoPackage)
+          router.push({
+            pathname: "/user/appointment/book",
+            query: { photoshoot:"basic" },
+        }); // Navigate to the appointment booking
         break;
       case "select-time":
         router.push("/user"); // Navigate to the appointment booking

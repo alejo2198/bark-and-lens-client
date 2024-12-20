@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./PhotoShootMenu.module.scss";
 import Button from "@/app/components/UI/Button/Button";
 
-const PhotoShootMenu = () => {
+const PhotoShootMenu = ({onDashboard,handlePackage}) => {
   const photoshoots = [
     {
       name: "basic",
@@ -83,8 +83,8 @@ const PhotoShootMenu = () => {
               </p>
             </div>
           </div>
-          
-          <Button variant="select" text="Select" />
+          {!onDashboard && <button className={styles.button} onClick={() => {handlePackage(photoshoot.name)}}>Select</button>}
+         
         </div>
       <aside className={styles.aside}>
         <ul className={styles["photoshoot__menu"]}>
