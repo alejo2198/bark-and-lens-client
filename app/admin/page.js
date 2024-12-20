@@ -72,7 +72,6 @@ const AppointmentTable = () => {
               <td className={styles["table__cell"]}>{appointment.email}</td>
               <td className={styles["table__cell"]}>
                 <Button variant="view" text="View Details"/>
-                
               </td>
             </tr>
           ))}
