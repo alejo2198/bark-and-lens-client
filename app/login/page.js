@@ -1,9 +1,34 @@
+'use client'
 import Nav from "../components/Nav/Nav";
 import Button from "../components/UI/Button/Button";
 import Link from "next/link";
 import styles from "./Login.module.scss"; // Create a separate module for Login styles
+import app,{auth,db} from "../firebase/firbaseConfig";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+
+  const provider = new GoogleAuthProvider();
+  const router = useRouter()
+  const handleGoogle = async (e) => {
+    e.preventDefault();
+    const result = await signInWithPopup(auth,provider);
+    const user = result.user;
+    const userRef = doc(db,"users",user.uid);
+    const userDoc = await getDoc(userRef)
+    if (!userDoc.exists()) {
+      // Create a new document with user data
+      await setDoc(userRef, {
+        email: user.email,
+        isAdmin:false
+      });
+    }
+    console.log(userRef)
+    const userData = userDoc.data()
+    userData.isAdmin ?  router.push("/admin") : router.push("/user")
+  }
   return (
     <>
       <Nav />
@@ -40,6 +65,8 @@ const Login = () => {
               </div>
 
               <Button variant="google-signup" text="Log In with Google" icon="google" />
+              <button onClick={handleGoogle}>Log in with Google</button>
+
             </form>
           </div>
         </div>

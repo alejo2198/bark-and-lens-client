@@ -1,11 +1,29 @@
 import Button from "@/app/components/UI/Button/Button";
 import styles from "./UpcomingAppointments.module.scss"
 import Image from "next/image";
+import { getFirestore, doc, deleteDoc } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 
 const UpcomingAppointments = ({ appointment }) => {
+  const db = getFirestore();
+  const router = useRouter();
+
   function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
   }
+  const cancelAppointment = async () => {
+    try {
+      console.log(appointment)
+      await deleteDoc(doc(db, "appointments", appointment.id));
+      console.log("Appointment canceled");
+
+      // If you need to navigate or update the state, you can call the onCancel function
+      
+      window.location.reload(); // Redirect back to the dashboard or any other page
+    } catch (error) {
+      console.error("Error canceling appointment: ", error);
+    }
+  };
   if (appointment) {
     return (
       <section className={styles["upcoming"]}>
@@ -13,20 +31,20 @@ const UpcomingAppointments = ({ appointment }) => {
         <div className={styles["container--apt"]}>
           <div className={styles.appointment__container}>
             <h2 className={styles["upcoming__header--secondary"]}>
-              {`${capitalizeFirstLetter(appointment.name)} Photo Package`}
+              {`${capitalizeFirstLetter(appointment.package)} Photo Package`}
             </h2>
             <div className={styles["appointment__info"]}>
               <ul className={styles.appointment__fields}>
                 <li className={styles.appointment__field}>
                   <p className={styles["appointment__data"]}>
                     <span className={styles["appointment__span"]}>Date: </span>
-                    {appointment.date.toDateString()}
+                    {appointment.date.toDate().toDateString()}
                   </p>
                 </li>
                 <li className={styles.appointment__field}>
                   <p className={styles["appointment__data"]}>
                     <span className={styles["appointment__span"]}>Location: </span>
-                    {appointment.location}
+                    Humber Bay Bridge
                   </p>
                 </li>
                 <li className={styles.appointment__field}>
@@ -37,6 +55,7 @@ const UpcomingAppointments = ({ appointment }) => {
                 </li>
               </ul>
                 <div className={styles.appointment__buttons}>
+                  <button className={styles.button} onClick={cancelAppointment}>cancel</button>
                 <Button variant="cancel" text="cancel" />
                 </div>
             </div>
